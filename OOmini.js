@@ -1,17 +1,19 @@
 //This object takes a given number and multiplies the first given number by 1
 //and then mulitplies the value of that number by the given number.
 function Multiplier(num){
-
 	this.num = num;
-	this.currentvalue = 1;
+	this.currentvalue = 1;//sets the current valuse of this
 	this.multiply = function(){
-		this.currentvalue = this.currentvalue * this.num;
+		this.currentvalue = this.currentvalue * this.num;// takes the current value and multiplies it by the number passed in 
 	}
 	this.getCurrentValue = function(){
-		return this.currentvalue;
+		return this.currentvalue; //returns the new current value
 	}
 }
 
+var mult1 = new Multiplier(3); //make a new instance of the object
+mult1.getCurrentValue(); //run the get current value function on the new instance
+mult1.multiply(); // run the multiply function on the instance
 
 //////////////////////////////////////////////////////////2
 //Set up an album function that holds photo objects in an array 
@@ -49,7 +51,7 @@ album.specific(2);
 
 ////////////////////////////////////////////////////3
 //set up the Person object and set name 
-var Person = function(name) {
+function Person(name) {
   this.name = name;
 }
 //set up the student object and set parameters for name and subject
@@ -71,8 +73,8 @@ function Teacher(name, subject){
 }
 //set up the school function with instances of student and teacher
 function School(){
-	var kid1 = new Student ("Tommy", "math");
-	var teach1 = new Teacher ("Mr.Teacher", "English");
+	this.kid1 = new Student ("Tommy", "math");
+	this.teach1 = new Teacher ("Mr.Teacher", "English");
 }
 //make new instance of school object
 var school1 = new School();
